@@ -4,6 +4,6 @@ from . import views
 
 app_name = 'projectList'
 urlpatterns = [
-    path('projects/', views.projectListView.as_view(), name='projectlist'),
-    path('projects/<int:pk>', views.projectView.as_view(), name='projects'),
+    path('', views.projectListView.as_view(), name='project_list'),
+    path('<slug:pk>', views.projectView.as_view(), name='projects'),
 ]
